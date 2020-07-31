@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.19.4",
+    "nodemon": "^2.0.4",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.8.6",
