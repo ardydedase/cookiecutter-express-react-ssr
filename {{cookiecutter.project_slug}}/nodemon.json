@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "ext": "ts,tsx,json",
+    "watch": ["src"],
+    "exec": "tsc && babel-node ts_dist/server.js"
+}

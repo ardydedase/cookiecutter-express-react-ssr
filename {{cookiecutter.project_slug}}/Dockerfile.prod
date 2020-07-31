@@ -1,0 +1,28 @@
+FROM node:12
+
+RUN mkdir -p /web-app
+WORKDIR /web-app
+
+# Copy files
+COPY ./.babelrc ./
+COPY ./.eslintrc ./
+COPY ./.gitignore ./
+COPY ./.prettierrc ./
+COPY ./*.js ./
+COPY ./*.json ./
+
+# Copy folders
+COPY ./__tests__ ./__tests__
+COPY ./config ./config
+COPY ./src ./src
+
+# Install packages
+RUN npm install
+
+RUN npm install pm2 -g
+
+RUN npm run build
+    
+EXPOSE 3030
+
+CMD [ "pm2-runtime", "npm", "--", "start" ]

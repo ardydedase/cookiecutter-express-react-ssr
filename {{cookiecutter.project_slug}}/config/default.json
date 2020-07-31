@@ -1,0 +1,9 @@
+{
+  "Static": {
+    "cssUrl": "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+    "title": "node-react-ssr"
+  },
+  "Tracking": {
+    "gaId": "YOUR-GA-ID"
+  }
+}

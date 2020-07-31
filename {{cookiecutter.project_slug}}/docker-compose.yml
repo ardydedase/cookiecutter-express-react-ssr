@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  webapp:
+    build: .
+    volumes:
+      - public:/web-app/public
+    restart: on-failure
+    ports:
+      - "3030:3030"
+    command: ["npm", "run", "dev"]
+  webpack:
+    build: .
+    volumes:
+      - public:/web-app/public    
+    restart: on-failure
+    command: ["npm", "run", "webpack"]
+    depends_on: 
+      - webapp
+volumes:
+  public:

@@ -1,0 +1,12 @@
+services:
+- type: web
+  name: sample-node-react
+  env: docker
+  dockerfilePath: ./Dockerfile.prod # optional
+  dockerContext: .
+  repo: https://github.com/ardydedase/node-react-ssr.git
+  plan: starter
+  branch: master
+  healthCheckPath: /healthcheck
+  # buildCommand: "npm install && npm run build && npm install pm2 -g"
+  # startCommand: "pm2 start dist/server.js && pm2 monit"

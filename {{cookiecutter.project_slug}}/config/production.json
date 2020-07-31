@@ -1,0 +1,8 @@
+{
+  "Static": {
+    "cssUrl": "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  },
+  "Tracking": {
+    "gaId": "YOUR-GA-ID"
+  }
+}

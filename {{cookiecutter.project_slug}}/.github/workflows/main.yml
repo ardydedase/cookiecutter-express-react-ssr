@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup node
+      uses: actions/setup-node@v1
+
+    - name: Install npm packages
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: |
+        npm install
+    - name: Format and lint
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: |
+        npm run lint
+    - name: Run tests
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: |
+        npm test
+    - name: Run build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: |
+        npm run build
