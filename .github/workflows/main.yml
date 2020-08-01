@@ -11,7 +11,7 @@ on:
     branches: [ master ]
 
 env:
-  reference-app-directory: ./reference-app
+  reference-app-directory: ./express-react-ssr-reference
 
 jobs:
   build:
