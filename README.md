@@ -30,9 +30,9 @@ The web app produced uses React server-side rendered with Express written in Typ
 - Google Analytics ID for tracking (optional).
 
 ## Usage
-1. Install cookiecutter
+1. Install cookiecutter. Run the command below or [follow the instructions here](https://cookiecutter.readthedocs.io/en/1.7.2/installation.html).
 
-        pip install
+        pip install cookiecutter
 
 1. Cookiecut the template
 
