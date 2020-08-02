@@ -15,7 +15,7 @@ The web app produced uses React server-side rendered with Express written in Typ
 ## What's included
 - Use Express and React.js
 - Uses webpack and babel for bundling and transpiling.
-- Go live with a Continuous Deployment Pipeline using GitHub and Render's Infrastructure as Code. A sample IaC file can be found here.
+- Go live with a Continuous Deployment Pipeline using GitHub and Render's Infrastructure as Code. A sample IaC file [can be found here]({{cookiecutter.project_slug}}/render.yaml).
 - Express Node.js web framework.
 - `node-config` to load configuration files.
 - Jest for testing.
@@ -24,7 +24,7 @@ The web app produced uses React server-side rendered with Express written in Typ
 ## What's NOT included
 - Custom CSS setup. Relies on bootstrap.
 
-## Cookiecutter customisable values
+## Cookiecutter values
 - GitHub username.
 - Project / service name deployed to Render.
 - Google Analytics ID for tracking (optional).

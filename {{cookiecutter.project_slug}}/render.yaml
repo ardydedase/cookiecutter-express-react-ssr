@@ -8,5 +8,4 @@ services:
   plan: starter
   branch: master
   healthCheckPath: /healthcheck
-  # buildCommand: "npm install && npm run build && npm install pm2 -g"
-  # startCommand: "pm2 start dist/server.js && pm2 monit"
+  
