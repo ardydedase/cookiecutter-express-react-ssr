@@ -41,9 +41,9 @@
 
 1. Open http://localhost:3030 in your browser or run:
 
-        open http://localhost:3030        
+        open http://localhost:3030
 
-Wait until webpack and webapp containers are running.
+Wait until `webpack` and `webapp` containers are running.
 
 ## Configuration for render.com deployment
 
