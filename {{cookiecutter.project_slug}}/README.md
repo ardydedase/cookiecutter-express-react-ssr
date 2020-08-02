@@ -2,9 +2,19 @@
 
 ![CI](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/workflows/CI/badge.svg?branch=master)
 
+Generated from express [react cookiecutter template here](https://github.com/ardydedase/cookiecutter-express-react-ssr).
+
 {{cookiecutter.project_short_description}}
 
+
 ## Run locally
+
+### Pre-requisites
+
+- [Install node >=12](https://nodejs.org/en/download/)
+- Install npm >=6
+
+### Step by step
 
 1. Use the supported version (I only tested this on node 12). If you are using [nvm](https://github.com/nvm-sh/nvm), run the following:
 
@@ -29,13 +39,19 @@
         npm run lint
         npm run test
 
-1. Open http://localhost:3030 in your browser or run:
+1. Open http://localhost:3030 in your browser or run the following in a new terminal window:
 
         open http://localhost:3030
 
 ## Run with Docker
 
-1. Use docker-compose:
+### Pre-requisites
+
+- [Install Docker](https://docs.docker.com/get-docker/)
+
+### Step by step
+
+1. Use `docker-compose`:
 
         docker-compose up
 
@@ -50,4 +66,4 @@ Wait until `webpack` and `webapp` containers are running.
 Build and run commands used for Render deployment (see the [Dockerfile.prod](Dockerfile.prod) and [render.yaml](render.yaml) file):
 
     npm run build
-    npm start
+    npm start # without pm2
