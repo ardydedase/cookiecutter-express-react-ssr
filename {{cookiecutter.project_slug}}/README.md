@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/workflows/CI/badge.svg?branch=master)
 
-Generated from express [react cookiecutter template here](https://github.com/ardydedase/cookiecutter-express-react-ssr).
+Generated from [express react cookiecutter template here](https://github.com/ardydedase/cookiecutter-express-react-ssr).
 
 {{cookiecutter.project_short_description}}
 
