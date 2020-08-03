@@ -12,6 +12,19 @@ The web app produced uses React server-side rendered with Express written in Typ
     - npm >=6
     - node >=12
 
+## Structure and sequence
+
+### Node API endpoint
+
+Everything under `/api`
+
+![Node API Sequence](./out/node-api-sequence/NodeAPI_Sequence.png "Node API Sequence")
+
+### Web pages rendered
+
+![Web pages rendered](./out/page-render-sequence/PageRender_Sequence.png "Web pages rendered")
+
+
 ## What's included
 - Use Express and React.js
 - Uses webpack and babel for bundling and transpiling.
@@ -19,7 +32,6 @@ The web app produced uses React server-side rendered with Express written in Typ
 - Express Node.js web framework.
 - `node-config` to load configuration files.
 - Jest for testing.
-
 
 ## What's NOT included
 - Custom CSS setup. Relies on bootstrap v4.
