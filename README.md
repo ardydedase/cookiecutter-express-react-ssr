@@ -18,11 +18,12 @@ The web app produced uses React server-side rendered with Express written in Typ
 
 Everything under `/api`
 
-![Node API Sequence](./out/node-api-sequence/NodeAPI_Sequence.png "Node API Sequence")
+![Node API Sequence](./out/diagrams/node-api-sequence/NodeAPI_Sequence.png "Node API Sequence")
 
 ### Web pages rendered
+`NodeAPI` object is the Node API endpoint above.
 
-![Web pages rendered](./out/page-render-sequence/PageRender_Sequence.png "Web pages rendered")
+![Web pages rendered](./out/diagrams/page-render-sequence/PageRender_Sequence.png "Web pages rendered")
 
 
 ## What's included
