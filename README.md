@@ -51,7 +51,7 @@ The web app produced uses React server-side rendered with Express written in Typ
 
         cd <project_slug>
 
-1. While you're in the directory, take a look at what's in the folder.
+1. Take a look at the directory structure and the files.
 
         ls -al
 
