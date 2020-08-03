@@ -62,7 +62,7 @@ Refer to the [README.md]({{cookiecutter.project_slug}}/README.md#run-locally) fi
 
 ## References
 
-- React Server-side rendering: https://medium.com/@danlegion/react-server-side-rendering-with-express-b6faf56ce22
-- Node Configuration: https://github.com/lorenwest/node-config
-- Using Jest: https://medium.com/@RupaniChirag/writing-unit-tests-in-typescript-d4719b8a0a40
+- [React Server-side Rendering](https://medium.com/@danlegion/react-server-side-rendering-with-express-b6faf56ce22)
+- [Node Configuration](https://github.com/lorenwest/node-config)
+- [Using Jest](https://medium.com/@RupaniChirag/writing-unit-tests-in-typescript-d4719b8a0a40)
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html)
