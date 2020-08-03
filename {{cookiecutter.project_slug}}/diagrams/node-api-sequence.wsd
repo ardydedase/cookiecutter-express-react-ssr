@@ -1,0 +1,19 @@
+@startuml Page render sequence
+actor WebApp
+WebApp -> server.ts: Call NodeAPI
+activate server.ts
+    server.ts -> routes: Route user request
+    activate routes
+        routes -> services: Invoke service
+        activate services
+            services -> ExternalAPI: Call External API endpoint
+            activate ExternalAPI
+                ExternalAPI --> services: API response
+            deactivate ExternalAPI
+            services --> routes: Service response
+        deactivate services
+        routes --> server.ts: Return response
+    deactivate routes
+deactivate server.ts
+server.ts --> WebApp: API Response
+@enduml

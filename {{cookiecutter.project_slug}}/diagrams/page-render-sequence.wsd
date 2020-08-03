@@ -1,0 +1,24 @@
+@startuml Page render sequence
+actor user
+user -> server.ts: Access web app
+activate server.ts
+    server.ts -> routes: Route user request
+    activate routes
+        routes -> components: Retrieve React component
+        activate components
+            components -> NodeAPI: Call API endpoint
+            activate NodeAPI
+                NodeAPI --> components: API response
+            deactivate NodeAPI
+            components --> routes: React component
+        deactivate components
+        routes -> utils: Get HTML
+        activate utils
+            utils --> routes: HTML block
+        deactivate utils
+        routes -> routes: Handlebars template
+        routes --> server.ts: Render web page
+    deactivate routes
+deactivate server.ts
+server.ts --> user: Display web page
+@enduml
