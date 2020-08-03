@@ -1,4 +1,4 @@
-@startuml Page render sequence
+@startuml NodeAPI_Sequence
 actor WebApp
 WebApp -> server.ts: Call NodeAPI
 activate server.ts

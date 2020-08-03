@@ -1,4 +1,4 @@
-@startuml Page render sequence
+@startuml PageRender_Sequence
 actor user
 user -> server.ts: Access web app
 activate server.ts
