@@ -29,10 +29,10 @@ Everything under `/api`
 ## What's included
 - Use Express and React.js
 - Uses webpack and babel for bundling and transpiling.
-- Go live with a Continuous Deployment Pipeline using GitHub and Render's Infrastructure as Code. A sample IaC file [can be found here]({{cookiecutter.project_slug}}/render.yaml).
-- Express Node.js web framework.
+- Handlebars for templating.
 - `node-config` to load configuration files.
 - Jest for testing.
+- Go live with a Continuous Deployment Pipeline using GitHub and Render's Infrastructure as Code. A sample IaC file [can be found here]({{cookiecutter.project_slug}}/render.yaml).
 
 ## What's NOT included
 - Custom CSS setup. Relies on bootstrap v4.
