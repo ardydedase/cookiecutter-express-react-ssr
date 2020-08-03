@@ -1,19 +1,19 @@
 @startuml NodeAPI_Sequence
-actor WebApp
-WebApp -> server.ts: Call NodeAPI
+actor "Web App"
+"Web App" -> server.ts: Call NodeAPI
 activate server.ts
     server.ts -> routes: Route user request
     activate routes
         routes -> services: Invoke service
         activate services
-            services -> ExternalAPI: Call External API endpoint
-            activate ExternalAPI
-                ExternalAPI --> services: API response
-            deactivate ExternalAPI
+            services -> "External API": Call External API endpoint
+            activate "External API"
+                "External API" --> services: API response
+            deactivate "External API"
             services --> routes: Service response
         deactivate services
         routes --> server.ts: Return response
     deactivate routes
 deactivate server.ts
-server.ts --> WebApp: API Response
+server.ts --> "Web App": API Response
 @enduml
