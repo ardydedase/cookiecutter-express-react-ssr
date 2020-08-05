@@ -22,9 +22,7 @@ export const getHtml = (varBlock: string, scriptBlock: string) => {
     ${varBlock}    
   </head>
   <body>
-    <div id="reactele">
-      {{{reactele}}}
-    </div>
+    <div id="reactele">{{{reactele}}}</div>
     <footer class="text-center" style="padding-top:15px;">
     <small>built by <a href="https://ardy.me" target="_blank">ardy.me</a> in his spare time</small>
     </footer>
