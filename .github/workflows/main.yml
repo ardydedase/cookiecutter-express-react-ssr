@@ -55,7 +55,7 @@ jobs:
       - name: Checkout reference app
         uses: actions/checkout@v2
         with:
-          repository: git@github.com:ardydedase/express-react-ssr-reference.git
+          repository: ardydedase/express-react-ssr-reference
           ref: main
           path: express-react-ssr-reference
 
@@ -72,8 +72,6 @@ jobs:
         working-directory: ./express-react-ssr-reference
         run: |
           ls -al
-          git config user.name github-actions
-          git config user.email github-actions@github.com
           git add .
           git commit -m "Changes from PR #${PR}"
-          git push
+          git push origin main
