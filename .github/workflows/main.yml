@@ -55,9 +55,22 @@ jobs:
       - name: Checkout reference app
         uses: actions/checkout@v2
         with:
-          repository: ardydedase/cookiecutter-express-react-ssr
-          path: cookiecutter-express-react-ssr
+          repository: ardydedase/express-react-ssr-reference
+          path: express-react-ssr-reference
 
-      - name: Check repo contents
+      - name: Sync repos
         run: |
-          ls -al
+          rsync -a --delete ${{env.reference-app-directory}} ./express-react-ssr-reference
+
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Changes from PR #${PR}"
+          git push
