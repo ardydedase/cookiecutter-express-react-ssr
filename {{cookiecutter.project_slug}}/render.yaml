@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: { { cookiecutter.project_slug } }
+    name: {{cookiecutter.project_slug}}
     env: docker
     dockerfilePath: ./Dockerfile.prod # optional
     dockerContext: .
