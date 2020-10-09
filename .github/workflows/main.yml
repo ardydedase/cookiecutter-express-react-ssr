@@ -55,7 +55,7 @@ jobs:
       - name: Checkout reference app
         uses: actions/checkout@v2
         with:
-          repository: ardydedase/express-react-ssr-reference
+          repository: git@github.com:ardydedase/express-react-ssr-reference.git
           ref: main
           path: express-react-ssr-reference
 
