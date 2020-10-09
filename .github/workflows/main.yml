@@ -72,6 +72,9 @@ jobs:
         working-directory: ./express-react-ssr-reference
         run: |
           ls -al
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout -b feature-${PR}
           git add .
           git commit -m "Changes from PR #${PR}"
-          git push origin main
+          git push origin feature-${PR}
