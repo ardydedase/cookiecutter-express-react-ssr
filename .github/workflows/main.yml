@@ -52,12 +52,9 @@ jobs:
         run: |
           npm run build
 
-  checkout-reference-app:
-    runs-on: ubuntu-latest
+      - name: Checkout reference app
+        repository: ardydedase/cookiecutter-express-react-ssr
 
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Check directory
-        working-directory: ${{env.reference-app-directory}}
-        run: ls -al
+      - name: Check repo contents
+        run: |
+          ls -al
