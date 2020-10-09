@@ -19,11 +19,13 @@ class Home extends React.Component {
           <Card.Body>
             <Card.Title>Node React SSR using TypeScript</Card.Title>
             <Card.Text>
-              <p>Starter app for building web apps using Node React SSR with TypeScript.</p>
-              <Button variant="outline-primary" href="https://github.com/ardydedase/cookiecutter-express-react-ssr">
-                Cookiecutter
-              </Button>
+              Starter app for building web apps using Node React SSR with TypeScript.
+              <br />
+              <a href="https://haiku.pro">haiku.pro</a> was built using this template.
             </Card.Text>
+            <Button variant="outline-primary" href="https://github.com/ardydedase/cookiecutter-express-react-ssr">
+              Cookiecutter
+            </Button>
           </Card.Body>
         </Card>
       </div>
