@@ -53,6 +53,7 @@ jobs:
           npm run build
 
       - name: Checkout reference app
+        uses: actions/checkout@v2
         repository: ardydedase/cookiecutter-express-react-ssr
 
       - name: Check repo contents
