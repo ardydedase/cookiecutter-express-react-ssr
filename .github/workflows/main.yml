@@ -11,13 +11,19 @@ on:
     branches: [master]
 
 env:
-  reference-app-directory: ./express-react-ssr-reference
+  reference-app-directory: ./express-react-ssr-app
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup git
+        uses: srt32/git-actions@v0.0.3
+
+      - name: Git status
+        run: git clone git@github.com:ardydedase/express-react-ssr-reference.git
+
       - uses: actions/checkout@v2
 
       - name: Setup Python
@@ -51,9 +57,3 @@ jobs:
         working-directory: ${{env.reference-app-directory}}
         run: |
           npm run build
-
-      - name: Setup git
-        uses: srt32/git-actions@v0.0.3
-
-      - name: Git status
-        run: git status
