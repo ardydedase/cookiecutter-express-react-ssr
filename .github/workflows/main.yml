@@ -56,6 +56,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ardydedase/express-react-ssr-reference
+          ref: main
           path: express-react-ssr-reference
 
       - name: Sync repos
