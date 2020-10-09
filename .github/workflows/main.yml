@@ -69,6 +69,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
+        working-directory: ./express-react-ssr-reference
         run: |
           ls -al
           git config user.name github-actions
