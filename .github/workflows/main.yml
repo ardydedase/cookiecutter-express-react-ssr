@@ -51,30 +51,3 @@ jobs:
         working-directory: ${{env.reference-app-directory}}
         run: |
           npm run build
-
-      - name: Checkout reference app
-        uses: actions/checkout@v2
-        with:
-          repository: ardydedase/express-react-ssr-reference
-          ref: main
-          path: express-react-ssr-reference
-
-      - name: Sync repos
-        run: |
-          rsync -a --delete ${{env.reference-app-directory}} ./express-react-ssr-reference
-
-      - uses: jwalton/gh-find-current-pr@v1
-        id: findPr
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit changes
-        working-directory: ./express-react-ssr-reference
-        run: |
-          ls -al
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git checkout -b feature-${PR}
-          git add .
-          git commit -m "Changes from PR #${PR}"
-          git push origin feature-${PR}
