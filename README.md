@@ -8,6 +8,7 @@ The web app produced uses React server-side rendered with Express written in Typ
 ## Reference app generated from cookiecutter
 
 Reference app: https://github.com/ardydedase/express-react-ssr-reference
+
 Deploy reference app to Render:
 
 <a href="https://render.com/deploy?repo=https://github.com/ardydedase/express-react-ssr-reference">
