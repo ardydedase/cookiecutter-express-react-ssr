@@ -54,7 +54,9 @@ jobs:
 
       - name: Checkout reference app
         uses: actions/checkout@v2
-        repository: ardydedase/cookiecutter-express-react-ssr
+        with:
+          repository: ardydedase/cookiecutter-express-react-ssr
+          path: cookiecutter-express-react-ssr
 
       - name: Check repo contents
         run: |
