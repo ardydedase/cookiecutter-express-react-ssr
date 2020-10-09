@@ -31,7 +31,7 @@ jobs:
 
       - name: Checkout reference app repository
         uses: srt32/git-actions@v0.0.3
-        args: git status
+        run: git status
 
       - name: Setup node
         uses: actions/setup-node@v1
