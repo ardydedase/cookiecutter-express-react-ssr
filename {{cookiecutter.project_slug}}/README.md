@@ -6,6 +6,8 @@ Generated from [express react cookiecutter template here](https://github.com/ard
 
 {{cookiecutter.project_short_description}}
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
 ## Run locally
 
 ### Pre-requisites
