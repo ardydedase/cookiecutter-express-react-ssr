@@ -2,31 +2,31 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
   pull_request:
-    branches: [ master ]
+    branches: [main]
 
 jobs:
-  test-and-build:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup node
-      uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
 
-    - name: Install npm packages
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: |
-        npm install
-    - name: Format and lint
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: |
-        npm run lint
-    - name: Run tests
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: |
-        npm test
-    - name: Run build
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: |
-        npm run build
+      - name: Install npm packages
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: |
+          npm install
+      - name: Format and lint
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: |
+          npm run lint
+      - name: Run tests
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: |
+          npm test
+      - name: Run build
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: |
+          npm run build
