@@ -1,13 +1,13 @@
 {
-	"github_username": "ardydedase",
-	"project_name": "Express React SSR Reference",
-	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "project_short_description": "My reference web app.",
-    "version": "0.1.0",
-    "google_analytics_id": "UA-XXXX-Y",
-    "_copy_without_render": [
-        ".github/workflows/main.yml",
-        "src/utils/template.ts",
-        "src/routes/web"
-    ]
+  "github_username": "ardydedase",
+  "project_name": "Express React SSR App",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_short_description": "My reference web app.",
+  "version": "0.1.0",
+  "google_analytics_id": "UA-XXXX-Y",
+  "_copy_without_render": [
+    ".github/workflows/main.yml",
+    "src/utils/template.ts",
+    "src/routes/web"
+  ]
 }

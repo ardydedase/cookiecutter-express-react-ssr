@@ -1,11 +1,10 @@
 services:
-- type: web
-  name: {{cookiecutter.project_slug}}
-  env: docker
-  dockerfilePath: ./Dockerfile.prod # optional
-  dockerContext: .
-  repo: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
-  plan: starter
-  branch: master
-  healthCheckPath: /healthcheck
-  
+  - type: web
+    name: {{cookiecutter.project_slug}}
+    env: docker
+    dockerfilePath: ./Dockerfile.prod # optional
+    dockerContext: .
+    repo: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+    plan: starter
+    branch: main
+    healthCheckPath: /healthcheck

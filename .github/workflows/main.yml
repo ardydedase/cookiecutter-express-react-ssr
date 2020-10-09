@@ -6,48 +6,48 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 env:
-  reference-app-directory: ./express-react-ssr-reference
+  reference-app-directory: ./express-react-ssr-app
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup Python
-      uses: actions/setup-python@v1.2.0
+      - name: Setup Python
+        uses: actions/setup-python@v1.2.0
 
-    - name: Install cookiecutter
-      run: pip install cookiecutter        
+      - name: Install cookiecutter
+        run: pip install cookiecutter
 
-    - name: Cookiecut the template
-      run: cookiecutter $GITHUB_WORKSPACE --no-input
+      - name: Cookiecut the template
+        run: cookiecutter $GITHUB_WORKSPACE --no-input
 
-    - name: Setup node
-      uses: actions/setup-node@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
 
-    - name: Install npm packages
-      working-directory: ${{env.reference-app-directory}}
-      run: |
-        npm install
+      - name: Install npm packages
+        working-directory: ${{env.reference-app-directory}}
+        run: |
+          npm install
 
-    - name: Format and lint
-      working-directory: ${{env.reference-app-directory}}
-      run: |
-        npm run lint
+      - name: Format and lint
+        working-directory: ${{env.reference-app-directory}}
+        run: |
+          npm run lint
 
-    - name: Run tests
-      working-directory: ${{env.reference-app-directory}}
-      run: |
-        npm test
+      - name: Run tests
+        working-directory: ${{env.reference-app-directory}}
+        run: |
+          npm test
 
-    - name: Run build
-      working-directory: ${{env.reference-app-directory}}
-      run: |
-        npm run build        
+      - name: Run build
+        working-directory: ${{env.reference-app-directory}}
+        run: |
+          npm run build
