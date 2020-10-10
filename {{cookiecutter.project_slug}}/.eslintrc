@@ -1,19 +1,19 @@
 {
-    "extends": ["eslint:recommended", "eslint-config-prettier", "plugin:react/recommended"],
-    "parser":"babel-eslint",
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 6
-    },
-    "rules": { "prettier/prettier": "error" },
-    "plugins": ["prettier", "react"],
-    "env": { "browser": true },
-    "settings": {
-      "react": {
-        "createClass": "createReactClass", // Regex for Component Factory to use,
-        // default to "createReactClass"
-        "pragma": "React",  // Pragma to use, default to "React"
-        "version": "detect" // React version. "detect" automatically picks the version you have installed.
-      }
-    }    
+  "extends": ["eslint:recommended", "eslint-config-prettier", "plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
+  "rules": { "prettier/prettier": "error" },
+  "plugins": ["prettier", "react"],
+  "env": { "browser": true },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React", // Pragma to use, default to "React"
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+    }
   }
+}
